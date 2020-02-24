@@ -10,7 +10,7 @@ function comprobar(eleccion) {
     switch (eleccion) {
         case "piedra":
             if (jugadaMaquina == "papel") { ganaMaquina = true; motivo = "papel envuelve a piedra"}
-            if (jugadaMaquina == "tijera") { ganaJugador = true; }
+            if (jugadaMaquina == "tijera") { ganaJugador = true; motivo = "piedra rompe tijeras"}
             if (jugadaMaquina == "lagarto") { ganaJugador = true; }
             if (jugadaMaquina == "spock") { ganaMaquina = true; }
             break;
