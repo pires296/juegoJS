@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Piedra, papel, tijera, largarto o Spocke</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="css/bulma/bulma.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="Favicon.png">
+  <script src="js/juego.js"></script>
+</head>
+
+<body>
+  <div class="container is-fluid">
+
+
+    <section class="section">
+      <div class="container has-text-centered">
+        <h2 class="title">Piedra, Papel, Tijera, Lagarto o Spock</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="level">
+              <div class="level-item">
+                <figure class="image is-128x128"><img class="is-rounded" src="piedra-papel-tijeras-lagarto-spock.jpg"
+                    alt=""></figure>
+              </div>
+            </div>
+            <h1>¿Piedra, Papel, Tijera, Lagarto o Spock?</h1>
+            <div class="clear"></div>
+            <div id="resultado"></div>
+            <div id="opciones">
+              <input type="button" name="elemento" id="piedra" value="Piedra" onclick="comprobar('piedra')">
+              <input type="button" name="elemento" id="papel" value="Papel" onclick="comprobar('papel')">
+              <input type="button" name="elemento" id="tijera" value="Tijera" onclick="comprobar('tijera')">
+              <input type="button" name="elemento" id="lagarto" value="Lagarto" onclick="comprobar('lagarto')">
+              <input type="button" name="elemento" id="spock" value="Spock" onclick="comprobar('spock')">
+            </div>
+
+            <button id="botonResetear" onclick="resetearPartida()">
+              BORRAR
+            </button>
+
+            <p id="texto"></p>
+    </section>
+
+    <div id="puntos">
+      <div id="puntosJugador">
+
+      </div>
+      <div id="puntosMaquina">
+
+
+
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-4 has-text-centered is-hidden-tablet"><a class="title is-4" href="#">Pablo Pires</a>
+          </div>
+          <div class="column is-4">
+            <div class="level"><a class="level-item" href="#">Espero</a><a class="level-item" href="#">Que</a></div>
+          </div>
+          <div class="column is-4 has-text-centered is-hidden-mobile"><a class="title is-4" href="#">Lo Disfrutes</a>
+          </div>
+          <div class="column is-4 has-text-right">
+            <div class="level"><a class="level-item" href="#">Y te guste</a><a class="level-item" href="#">Un
+                montón.</a></div>
+          </div>
+        </div>
+        <p class="subtitle has-text-centered is-6">&copy; 2020 Pablo Pires. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

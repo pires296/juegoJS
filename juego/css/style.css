@@ -1,0 +1,17 @@
+#puntos #puntosJugador,#puntosMaquina {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    border: 1px solid red;
+    width: 500px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 30%;
+}
+
+.punto {
+    border: 1px solid blueviolet;
+}
+
+#botonResetear {
+    margin-top: 20px;
+}
