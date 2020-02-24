@@ -5,7 +5,7 @@
     width: 600px;
     height: 100px;
     margin-top: 30px;
-    margin-left: 33%;
+    margin-left: 37%;
 }
 
 .punto {
@@ -14,4 +14,17 @@
 
 #botonResetear {
     margin-top: 20px;
+}
+
+#opciones {
+    margin-top: 20px;
+}
+
+#jugadorpuntos {
+    margin-left: 46%;
+}
+
+#maquinapuntos {
+    margin-left: 46%;
+    margin-top: 30px;
 }
