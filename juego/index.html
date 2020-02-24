@@ -10,10 +10,14 @@
   <link rel="stylesheet" href="css/bulma/bulma.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="Favicon.png">
+  <link href="https://code.ionicframework.com/1.0.0-beta.6/css/ionic.css" rel="stylesheet">
+  <link href="css/popup.css" rel="stylesheet">
+
   <script src="js/juego.js"></script>
+  <script src="js/popup.js"></script>
 </head>
 
-<body>
+<body ng-controller="PlaylistsCtrl">
   <div class="container is-fluid">
 
 
@@ -38,7 +42,6 @@
               <input type="button" name="elemento" id="lagarto" value="Lagarto" onclick="comprobar('lagarto')">
               <input type="button" name="elemento" id="spock" value="Spock" onclick="comprobar('spock')">
             </div>
-
             <button id="botonResetear" onclick="resetearPartida()">
               BORRAR
             </button>
@@ -48,15 +51,10 @@
 
     <div id="puntos">
       <div id="puntosJugador">
-
       </div>
       <div id="puntosMaquina">
-
-
-
       </div>
     </div>
-
 
     <footer class="footer">
       <div class="container">

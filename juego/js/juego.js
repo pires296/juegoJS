@@ -11,32 +11,32 @@ function comprobar(eleccion) {
         case "piedra":
             if (jugadaMaquina == "papel") { ganaMaquina = true; motivo = "papel envuelve a piedra"}
             if (jugadaMaquina == "tijera") { ganaJugador = true; motivo = "piedra rompe tijeras"}
-            if (jugadaMaquina == "lagarto") { ganaJugador = true; }
-            if (jugadaMaquina == "spock") { ganaMaquina = true; }
+            if (jugadaMaquina == "lagarto") { ganaJugador = true; motivo = "piedra aplasta a lagarto"}
+            if (jugadaMaquina == "spock") { ganaMaquina = true; motivo = "Spock desintegra piedra"}
             break;
         case "papel":
-            if (jugadaMaquina == "piedra") { ganaJugador = true; }
-            if (jugadaMaquina == "tijera") { ganaMaquina = true; }
-            if (jugadaMaquina == "lagarto") { ganaMaquina = true; }
-            if (jugadaMaquina == "spock") { ganaJugador = true; }
+            if (jugadaMaquina == "piedra") { ganaJugador = true; motivo = "papel envuelve a piedra"}
+            if (jugadaMaquina == "tijera") { ganaMaquina = true; motivo = "tijeras cortan papel"}
+            if (jugadaMaquina == "lagarto") { ganaMaquina = true; motivo = "lagarto se come papel" }
+            if (jugadaMaquina == "spock") { ganaJugador = true; motivo = "papel desautoriza Spock"}
             break;
         case "tijera":
-            if (jugadaMaquina == "piedra") { ganaMaquina = true; }
-            if (jugadaMaquina == "papel") { ganaJugador = true; }
-            if (jugadaMaquina == "lagarto") { ganaJugador = true; }
-            if (jugadaMaquina == "spock") { ganaMaquina = true; }
+            if (jugadaMaquina == "piedra") { ganaMaquina = true; motivo = "piedra rompe tijeras"}
+            if (jugadaMaquina == "papel") { ganaJugador = true; motivo = "tijeras cortan papel" }
+            if (jugadaMaquina == "lagarto") { ganaJugador = true; motivo= "tijeras decapitan al lagarto"}
+            if (jugadaMaquina == "spock") { ganaMaquina = true; motivo = "Spock rompe tijeras"}
             break;
         case "lagarto":
-            if (jugadaMaquina == "piedra") { ganaMaquina = true; }
-            if (jugadaMaquina == "papel") { ganaJugador = true; }
-            if (jugadaMaquina == "tijera") { ganaMaquina = true; }
-            if (jugadaMaquina == "spock") { ganaJugador = true; }
+            if (jugadaMaquina == "piedra") { ganaMaquina = true; motivo = "piedra aplasta a lagarto"}
+            if (jugadaMaquina == "papel") { ganaJugador = true; motivo = "lagarto se come papel"}
+            if (jugadaMaquina == "tijera") { ganaMaquina = true; motivo = "tijeras decapitan al lagarto"}
+            if (jugadaMaquina == "spock") { ganaJugador = true; motivo = "lagarto envenena a Spock"}
             break;
         case "spock":
-            if (jugadaMaquina == "piedra") { ganaJugador = true; }
-            if (jugadaMaquina == "papel") { ganaMaquina = true; }
-            if (jugadaMaquina == "tijera") { ganaJugador = true; }
-            if (jugadaMaquina == "lagarto") { ganaMaquina = true; }
+            if (jugadaMaquina == "piedra") { ganaJugador = true; motivo = "Spock desintegra piedra"}
+            if (jugadaMaquina == "papel") { ganaMaquina = true; motivo = "papel desautoriza Spock"}
+            if (jugadaMaquina == "tijera") { ganaJugador = true; motivo = "Spock rompe tijeras"}
+            if (jugadaMaquina == "lagarto") { ganaMaquina = true; motivo = "lagarto envena a Spock"}
             break;
         default: break;
 
@@ -63,14 +63,17 @@ function sumarPunto(ganador, motivo) {
 
     divPuntos.appendChild(punto);
 
-    console.log(ganador + " " + divPuntos.children.length);
+    console.log(motivo);
+
+    mostrarMensaje("Ha ganado " + ganador + " porque " + motivo);
 
     if (divPuntos.children.length == 10) {
-        mostrarMensaje("Ha ganado: " + ganador + " porque ", motivo);
+       
+        alert("Ha ganado " + ganador)
+        
         resetearPartida(ganador);
-    } else {
-        mostrarMensaje("Ha ganado: " + ganador + " porque ", motivo);
     }
+
 }
 
 // Borra todo lo que tenga dentro de los grids y reinicia la partida
