@@ -9,34 +9,34 @@ function comprobar(eleccion) {
 
     switch (eleccion) {
         case "piedra":
-            if (jugadaMaquina == "papel") { ganaMaquina = true; motivo = "papel envuelve a piedra"}
-            if (jugadaMaquina == "tijera") { ganaJugador = true; motivo = "piedra rompe tijeras"}
-            if (jugadaMaquina == "lagarto") { ganaJugador = true; motivo = "piedra aplasta a lagarto"}
+            if (jugadaMaquina == "papel") { ganaMaquina = true; motivo = "Papel envuelve a piedra"}
+            if (jugadaMaquina == "tijera") { ganaJugador = true; motivo = "Piedra rompe tijeras"}
+            if (jugadaMaquina == "lagarto") { ganaJugador = true; motivo = "Piedra aplasta a lagarto"}
             if (jugadaMaquina == "spock") { ganaMaquina = true; motivo = "Spock desintegra piedra"}
             break;
         case "papel":
-            if (jugadaMaquina == "piedra") { ganaJugador = true; motivo = "papel envuelve a piedra"}
-            if (jugadaMaquina == "tijera") { ganaMaquina = true; motivo = "tijeras cortan papel"}
-            if (jugadaMaquina == "lagarto") { ganaMaquina = true; motivo = "lagarto se come papel" }
-            if (jugadaMaquina == "spock") { ganaJugador = true; motivo = "papel desautoriza Spock"}
+            if (jugadaMaquina == "piedra") { ganaJugador = true; motivo = "Papel envuelve a piedra"}
+            if (jugadaMaquina == "tijera") { ganaMaquina = true; motivo = "Tijeras cortan papel"}
+            if (jugadaMaquina == "lagarto") { ganaMaquina = true; motivo = "Lagarto se come papel" }
+            if (jugadaMaquina == "spock") { ganaJugador = true; motivo = "Papel desautoriza Spock"}
             break;
         case "tijera":
-            if (jugadaMaquina == "piedra") { ganaMaquina = true; motivo = "piedra rompe tijeras"}
-            if (jugadaMaquina == "papel") { ganaJugador = true; motivo = "tijeras cortan papel" }
-            if (jugadaMaquina == "lagarto") { ganaJugador = true; motivo= "tijeras decapitan al lagarto"}
+            if (jugadaMaquina == "piedra") { ganaMaquina = true; motivo = "Piedra rompe tijeras"}
+            if (jugadaMaquina == "papel") { ganaJugador = true; motivo = "Tijeras cortan papel" }
+            if (jugadaMaquina == "lagarto") { ganaJugador = true; motivo= "Tijeras decapitan al lagarto"}
             if (jugadaMaquina == "spock") { ganaMaquina = true; motivo = "Spock rompe tijeras"}
             break;
         case "lagarto":
-            if (jugadaMaquina == "piedra") { ganaMaquina = true; motivo = "piedra aplasta a lagarto"}
-            if (jugadaMaquina == "papel") { ganaJugador = true; motivo = "lagarto se come papel"}
-            if (jugadaMaquina == "tijera") { ganaMaquina = true; motivo = "tijeras decapitan al lagarto"}
-            if (jugadaMaquina == "spock") { ganaJugador = true; motivo = "lagarto envenena a Spock"}
+            if (jugadaMaquina == "piedra") { ganaMaquina = true; motivo = "Piedra aplasta a lagarto"}
+            if (jugadaMaquina == "papel") { ganaJugador = true; motivo = "Lagarto se come papel"}
+            if (jugadaMaquina == "tijera") { ganaMaquina = true; motivo = "Tijeras decapitan al lagarto"}
+            if (jugadaMaquina == "spock") { ganaJugador = true; motivo = "Lagarto envenena a Spock"}
             break;
         case "spock":
             if (jugadaMaquina == "piedra") { ganaJugador = true; motivo = "Spock desintegra piedra"}
-            if (jugadaMaquina == "papel") { ganaMaquina = true; motivo = "papel desautoriza Spock"}
+            if (jugadaMaquina == "papel") { ganaMaquina = true; motivo = "Papel desautoriza Spock"}
             if (jugadaMaquina == "tijera") { ganaJugador = true; motivo = "Spock rompe tijeras"}
-            if (jugadaMaquina == "lagarto") { ganaMaquina = true; motivo = "lagarto envena a Spock"}
+            if (jugadaMaquina == "lagarto") { ganaMaquina = true; motivo = "Lagarto envena a Spock"}
             break;
         default: break;
 
@@ -47,7 +47,7 @@ function comprobar(eleccion) {
     } else if (ganaMaquina) {
         sumarPunto("Maquina", motivo);
     } else {
-        mostrarMensaje("empate");
+        mostrarMensaje("Empate");
     }
     ganaJugador = false;
 
@@ -71,13 +71,12 @@ function sumarPunto(ganador, motivo) {
        
         alert("Ha ganado " + ganador)
         
-        resetearPartida(ganador);
     }
 
 }
 
 // Borra todo lo que tenga dentro de los grids y reinicia la partida
-function resetearPartida(ganador) {
+function resetearPartida() {
     var divPuntosJugador = document.getElementById("puntosJugador");
     var divPuntosMaquina = document.getElementById("puntosMaquina");
 
